@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './Header';
+import Clock from './Clock';
 import './App.css';
 
-function App() {
+function App(props) {
+  let ids = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="main-container">
+      <Clock />
+      <h1>{props.greeting}</h1>
+      {ids.map(id => {
+        return (<Header key={id} id={id} />)
+      })}
+      <button onClick={() => console.log('hey')}>CLICK</button>
     </div>
   );
 }
-
 export default App;
