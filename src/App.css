@@ -1,9 +1,8 @@
 #body {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: auto;
-  height: 95vh;
+  height: 100vh;
 }
 
 #main-container {
@@ -14,6 +13,8 @@
 
 #post-list {
   width: 60vw;
+  height: 95vh;
+  overflow: auto;
 }
 
 #side-bar {
